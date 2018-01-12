@@ -7,18 +7,22 @@ It supports GET, PUT, POST, and DELETE requests against the mock API and note th
 
 ```
 > yarn install
-> yarn start
-Load http://localhost:3333/api/companies
+> yarn start   
+
+Load http://localhost:3333/api/companies usring browser or some rest client
 ```
-
-### Info
-
-Application data is in `db/db.json` file.
 
 ### Endpoints 
 
 Application endpoints based on `db/db.js` objects and support REST standards.
+Meaning you can use GET, PUT, POST, and DELETE requests against all provided endpoints.   
+Provided endpoints are:   
+* `http://localhost:3333/api/companies`   
+* `http://localhost:3333/api/candidates`
+* `http://localhost:3333/api/reports`
+...    
 
-POST `http://localhost:3333/api/companies`   
-GET `http://localhost:3333/api/companies`
+### Additional info
+
+Application data is in `db/db.json` file.
 
