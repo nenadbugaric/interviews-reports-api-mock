@@ -23,9 +23,8 @@ Provided endpoints are:
    
 
 * *POST* `http://localhost:3333/api/reports`    
-Request example
 ```
-// Post request payload example
+// Post request payload example for "reports" endpoint
 {
     "candidateId": 9451057,
     "candidateName": "Zula Feeney",
