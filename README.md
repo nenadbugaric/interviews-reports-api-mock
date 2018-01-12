@@ -25,4 +25,3 @@ Provided endpoints are:
 ### Additional info
 
 Application data is in `db/db.json` file.
-

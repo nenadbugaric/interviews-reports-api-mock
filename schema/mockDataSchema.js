@@ -30,7 +30,7 @@ var schema = {
     "candidates": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 10,
+      "maxItems": 20,
       "items": {
         "type": "object",
         "properties": {
@@ -38,6 +38,10 @@ var schema = {
             "type": "number",
             "unique": true,
             "minimum": 1
+          },
+          "avatar": {
+            "type": "string",
+            "faker": "image.avatar"
           },
           "name": {
             "type": "string",
