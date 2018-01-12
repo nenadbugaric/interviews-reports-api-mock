@@ -21,8 +21,11 @@ Provided endpoints are:
 * *GET* `http://localhost:3333/api/candidates`
 * *GET* `http://localhost:3333/api/reports`   
    
-* *POST* `http://localhost:3333/api/reports`   
+
+* *POST* `http://localhost:3333/api/reports`    
+Request example
 ```
+// Post request payload example
 {
     "candidateId": 9451057,
     "candidateName": "Zula Feeney",
