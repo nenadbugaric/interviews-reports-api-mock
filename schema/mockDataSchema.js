@@ -4,7 +4,7 @@ var schema = {
     "companies": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 100,
+      "maxItems": 10,
       "items": {
         "type": "object",
         "properties": {
@@ -15,7 +15,7 @@ var schema = {
           },
           "name": {
             "type": "string",
-            "faker": "name.findName"
+            "faker": "company.companyName"
           },
           "email": {
             "type": "string",
@@ -30,7 +30,7 @@ var schema = {
     "candidates": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 100,
+      "maxItems": 10,
       "items": {
         "type": "object",
         "properties": {
@@ -39,18 +39,26 @@ var schema = {
             "unique": true,
             "minimum": 1
           },
-          "username": {
+          "name": {
             "type": "string",
-            "faker": "internet.userName"
+            "faker": "name.findName"
+          },
+          "birthday": {
+            "type": "string",
+            "faker": "date.past"
           },
           "email": {
             "type": "string",
             "format": "email",
             "unique": true,
             "faker": "internet.email"
+          },
+          "education": {
+            "type": "string",
+            "faker": "name.jobType"
           }
         },
-        "required": ["id", "username", "email"]
+        "required": ["id", "name", "birthday", "email", "education"]
       }
     },
     "reports": {
@@ -65,22 +73,47 @@ var schema = {
             "unique": true,
             "minimum": 1
           },
+          "candidateId": {
+            "type": "number"
+          },
+          "companyId": {
+            "type": "number"
+          },
+          "candidateName": {
+            "type": "string",
+            "faker": "name.findName"
+          },
+          "companyName": {
+            "type": "string",
+            "faker": "company.companyName"
+          },
           "interviewDate": {
             "type": "string",
             "faker": "date.recent"
           },
-          "candidate": {
-            "type": "number"
+          "phase": {
+            "type": "string",
+            "faker": "lorem.word"
           },
-          "company": {
-            "type": "number"
+          "status": {
+            "type": "string",
+            "faker": "lorem.word"
+          },
+          "note": {
+            "type": "string",
+            "faker": "lorem.paragraph"
           }
         },
         "required": [
           "id",
+          "candidateId",
+          "candidateName",
+          "companyId",
+          "companyName",
           "interviewDate",
-          "candidate",
-          "company"
+          "phase",
+          "status",
+          "note"
         ]
       }
     }
