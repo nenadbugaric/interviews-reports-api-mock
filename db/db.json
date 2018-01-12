@@ -1,0 +1,34 @@
+{
+  "companies": [
+    {
+      "id": 10833893,
+      "name": "Ms. Delphine Cremin",
+      "email": "Ludwig_Murphy2@gmail.com"
+    },
+    {
+      "id": 95439846,
+      "name": "Chad Wehner",
+      "email": "Rhoda.Wilderman36@gmail.com"
+    },
+    {
+      "id": 34861232,
+      "name": "Ruthie VonRueden",
+      "email": "Jalyn.Dibbert@yahoo.com"
+    }
+  ],
+  "candidates": [
+    {
+      "id": 76940522,
+      "username": "Bradley.Mitchell",
+      "email": "Ayden.Bahringer@gmail.com"
+    }
+  ],
+  "reports": [
+    {
+      "id": 68555401,
+      "interviewDate": "Fri Jan 12 2018 12:33:45 GMT+0100 (CET)",
+      "candidate": 76940522,
+      "company": 34861232
+    }
+  ]
+}
