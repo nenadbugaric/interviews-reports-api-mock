@@ -9,7 +9,7 @@ It supports GET, PUT, POST, and DELETE requests against the mock API and note th
 > yarn install
 > yarn start   
 
-Load http://localhost:3333/api/companies usring browser or some rest client
+Load http://localhost:3333/api/companies using browser or some rest client
 ```
 
 ### Endpoints 
@@ -20,7 +20,7 @@ Provided endpoints are:
 * `http://localhost:3333/api/companies`   
 * `http://localhost:3333/api/candidates`
 * `http://localhost:3333/api/reports`   
-  
+
 
 ### Additional info
 
