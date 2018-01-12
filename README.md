@@ -19,8 +19,8 @@ Meaning you can use GET, PUT, POST, and DELETE requests against all provided end
 Provided endpoints are:   
 * `http://localhost:3333/api/companies`   
 * `http://localhost:3333/api/candidates`
-* `http://localhost:3333/api/reports`
-...    
+* `http://localhost:3333/api/reports`   
+  
 
 ### Additional info
 
