@@ -45,8 +45,8 @@ POST http://localhost:3333/login
 Request Payload
 ```
 {
-  email: `dev@dev.com`
-  password: `developer`
+  "email": "dev@dev.com",
+  "password": "developer"
 }
 ```   
 Successful login response 
