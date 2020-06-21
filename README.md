@@ -4,7 +4,7 @@ This is an Mock API which is used for development of "Interviews Reports" app.
 It supports GET, PUT, POST, and DELETE requests against the mock API and note that changes are saved to `db/db.json`.
 
 ### Getting Started
-
+If you are not using `yarn` you can use `npm` instead.  
 ```
 > yarn install
 > yarn start   
