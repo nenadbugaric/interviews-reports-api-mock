@@ -15,14 +15,13 @@ Load http://localhost:3333/api/companies using browser or some rest client
 ### Endpoints 
 
 Application endpoints based on `db/db.js` objects and support REST standards.
-Meaning you can use GET, PUT, POST, and DELETE requests against all provided endpoints.   
+Meaning you can use GET, PUT, POST, PATCH and DELETE requests against provided endpoints.   
 Provided endpoints are:   
-* *GET* `http://localhost:3333/api/companies`   
-* *GET* `http://localhost:3333/api/candidates`
-* *GET* `http://localhost:3333/api/reports`   
+* `http://localhost:3333/api/companies`   
+* `http://localhost:3333/api/candidates`
+* `http://localhost:3333/api/reports`   
+* `http://localhost:3333/api/users`      
    
-
-* *POST* `http://localhost:3333/api/reports`    
 ```
 // Post request payload example for "reports" endpoint
 {
@@ -37,7 +36,25 @@ Provided endpoints are:
 }
 ``` 
 
-
+### Login
+There is already created user in DB which credentials can be used in order to login.    
+Authorization endpoint
+```
+POST http://localhost:3333/login
+```
+Request Payload
+```
+{
+  email: `dev@dev.com`
+  password: `developer`
+}
+```   
+Successful login response 
+```
+{
+  "accessToken": "ey...Yc"
+}
+```
 ### Additional info
 
 Application data is in `db/db.json` file.
