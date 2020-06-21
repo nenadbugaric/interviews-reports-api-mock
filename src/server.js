@@ -1,20 +1,24 @@
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('db/db.json')
-const middlewares = jsonServer.defaults()
+const jsonServer = require('json-server');
+const auth = require('json-server-auth');
 
-// start setting up json-server middlewares
-server.use(middlewares)
+const server = jsonServer.create();
+const middlewares = jsonServer.defaults();
+const router = jsonServer.router('db/db.json');
 
-// To handle POST, PUT and PATCH you need to use a body-parser
-// You can use the one used by JSON Server
-server.use(jsonServer.bodyParser)
+const rules = auth.rewriter({
+  "/api/users*": "/444/api/users$1",
+  "/api/companies*": "/664/api/companies$1",
+  "/api/candidates*": "/664/api/candidates$1",
+  "/api/reports*": "/664/api/reports$1",
+});
 
-server.use('/api', router)
+server.use(middlewares);
+server.use(jsonServer.bodyParser);
 
-// start listening to port 3333
-server.listen(3333, () => {
-    console.log(`
-        JSON Server is running on port 3333
-    `);
-})
+server.db = router.db;
+
+server.use(rules);
+server.use(auth);
+server.use('/api', router);
+
+server.listen(3333, () => console.log('JSON Server is running on port 3333'));
