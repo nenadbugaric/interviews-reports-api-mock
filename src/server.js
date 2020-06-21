@@ -21,4 +21,4 @@ server.use(rules);
 server.use(auth);
 server.use('/api', router);
 
-server.listen(3333, () => console.log('JSON Server is running on port 3333'));
+server.listen(3333, () => console.log('Running on http://localhost:3333'));
