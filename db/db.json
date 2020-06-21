@@ -120,6 +120,9 @@
     {
       "email": "dev@dev.com",
       "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "name": "Developer",
+      "surname": "Developeric",
+      "age": 404,
       "id": 1
     }
   ]
