@@ -4,18 +4,16 @@
    and rapid page loads due to local, static data.
  */
 
-const jsf = require('json-schema-faker')
-const mockDataSchema = require('./mockDataSchema')
-const fs = require('fs')
+const fs = require('fs');
+const jsf = require('json-schema-faker');
+const mockDataSchema = require('./mockDataSchema');
 
-const fakeApiData = jsf(mockDataSchema)
+const fakeApiData = jsf(mockDataSchema);
 
-const json = JSON.stringify(fakeApiData)
-
-fs.writeFile("db/db.json", json, function (err) {
+fs.writeFile("db/db.json", JSON.stringify(fakeApiData), function (err) {
   if (err) {
     return console.log(err)
-  } else {
-    console.log("Mock data generated.")
   }
-})
+
+  console.log("Mock data generated.")
+});
