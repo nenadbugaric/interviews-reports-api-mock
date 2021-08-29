@@ -3,8 +3,8 @@ const schema = {
   "properties": {
     "companies": {
       "type": "array",
-      "minItems": 1,
-      "maxItems": 10,
+      "minItems": 5,
+      "maxItems": 5,
       "items": {
         "type": "object",
         "properties": {
@@ -29,7 +29,7 @@ const schema = {
     },
     "candidates": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 10,
       "maxItems": 20,
       "items": {
         "type": "object",
@@ -67,8 +67,8 @@ const schema = {
     },
     "reports": {
       "type": "array",
-      "minItems": 1,
-      "maxItems": 3,
+      "minItems": 20,
+      "maxItems": 30,
       "items": {
         "type": "object",
         "properties": {

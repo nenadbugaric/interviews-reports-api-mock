@@ -6,8 +6,8 @@ It supports GET, PUT, POST, and DELETE requests against the mock API and note th
 ### Getting Started
 If you are not using `yarn` you can use `npm` instead.  
 ```
-> yarn install
-> yarn start   
+> npm install
+> npm start   
 
 Load http://localhost:3333/api/companies using browser or some rest client
 ```
@@ -37,7 +37,7 @@ Provided endpoints are:
 ``` 
 
 ### Login
-In order to access protected endpoints for creation, deletion or resource updating user need to be authorized.   
+In order to access protected endpoints, user need to be authorized.   
 There is already created user in DB which credentials can be used in order to login.    
 Auth endpoint
 ```
