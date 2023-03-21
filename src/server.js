@@ -1,5 +1,6 @@
 const jsonServer = require('json-server');
-const auth = require('json-server-auth');
+//uncomment to turn on auth
+// const auth = require('json-server-auth');
 
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
