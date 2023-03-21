@@ -6,7 +6,6 @@ const middlewares = jsonServer.defaults();
 const router = jsonServer.router('db/db.json');
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 server.use('/api/candidates', jsonParser, function (req, res, next) {
   if (req.method === 'POST') {
